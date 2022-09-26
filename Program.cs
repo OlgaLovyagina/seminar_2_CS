@@ -303,12 +303,51 @@ void Task19()
 }
 #endregion
 
+#region Task23
+/// <summary>
+///Напишите программу, которая принимает на
+///вход число(N) и выдаёт таблицу кубов чисел от 1 до N.
+/// </summary>
+/// 
+void Task23()
+{
+    Console.WriteLine("Введите число: ");
+    int num = Convert.ToInt32(Console.ReadLine());
+    int i = 1;
+    Result(num, i);
+}
+
+void Result(int num, int i)
+    {
+
+        if (num > i)
+        {
+            while (i <= num)
+            {
+                Console.WriteLine($"Число  {i}  |  Куб числа = {Math.Pow((i), 3)}");
+                i++;
+            }
+        }
+        else
+        {
+            while (i >= num)
+            {
+                Console.WriteLine($"Число  {num}  |  Куб числа = {Math.Pow((num), 3)}");
+                num++;
+            }
+        }
+    }
+
+
+
+  
+#endregion
 
 //Task17();
 //Task18();
 //Task21();
 //Task21_1();
-Task19();
-
+//Task19();
+Task23();
 
 Console.ReadLine();
