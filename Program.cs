@@ -340,7 +340,146 @@ void Result(int num, int i)
 
 
 
-  
+
+#endregion
+
+
+// ДЗ 4
+//Задача 25: Используя определение степени числа, напишите цикл, который принимает на вход два
+//натуральных числа (A и B) и    возводит число A в степень B.
+
+
+//Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+
+
+//Задача 29: Напишите программу, которая задаёт массив из 8 случайных целых чисел и выводит 
+//   отсортированный по модулю массив.
+
+#region Task24
+/// <summary>
+///Напишите программу, которая принимает на вход число (А) и выдаёт сумму чисел
+///от 1 до А.
+/// </summary>
+void Task24()
+{
+    int num = 15;
+    int sum = 0;
+    for (int i = 1; i <= num; i++)
+    {
+        Console.WriteLine($"{i}");
+        sum += i;
+    }
+    Console.WriteLine($"{sum}");
+}
+
+#endregion
+#region Task26
+/// <summary>
+///Напишите программу, которая принимает на вход число и выдаёт количество цифр в числе.
+/// </summary>
+void Task26()
+{
+    {
+        int number = 1234322;
+        int current = number;
+        int count = 0;
+        while (current > 0)
+        {
+            current = current / 10;
+            count = count + 1;
+        }
+        Console.WriteLine($"Количество цифр в числе {number} = {count}");
+    }
+}
+
+#endregion
+
+#region Task26_1
+/// <summary>
+///Напишите программу, которая принимает на вход число и выдаёт количество цифр в числе.
+/// </summary>
+void Task26_1()
+{
+    {
+        int number = 14124;
+        int i = 0;
+
+        while (number > 0)
+        {
+            number /= 10;
+            i++;
+        }
+        Console.WriteLine(i);
+    }
+}
+
+#endregion
+
+#region Task26_2
+/// <summary>
+///Напишите программу, которая принимает на вход число и выдаёт количество цифр в числе.
+/// </summary>
+void Task26_2()
+{
+    {
+        Console.WriteLine("Введите число: ");
+        string number = Console.ReadLine();
+        Console.WriteLine(number.Length);
+    }
+}
+
+#endregion
+
+
+#region Task28
+/// <summary>
+///Напишите программу, которая принимает на вход число и выдаёт произведение чисел от 1 до N.(Факториал)
+/// </summary>
+void Task28()
+{
+    {
+        Console.WriteLine("Введите число: ");        
+        int number = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine();
+
+        int product = 1;
+        for (int i = 1; i <= number; i++)
+        {
+            Console.WriteLine($"{i}");
+            product *= i;
+        }
+        Console.WriteLine();
+        Console.WriteLine($"{product}");
+    }
+}
+
+#endregion
+
+
+#region Task30
+/// <summary>
+///Напишите программу, которая выводит массив из 8 элементов, заполненный нулями и  
+//единицами в случайном порядке.
+/// </summary>
+void Task30()
+{
+    Random random = new Random();
+    int size = random.Next(4, 10);
+    int[] numbers = new int[size];
+    Console.WriteLine(size);
+
+    for (int i = 0; i < size; i++)
+    {
+        numbers[i] = random.Next(0, 2); // 0 или 1, 2 не входит
+    }
+
+    for (int i = 0; i < size; i++)
+    {
+        Console.Write(numbers[i] + "\t" );
+    }
+    Console.WriteLine();
+}
+
 #endregion
 
 //Task17();
@@ -348,6 +487,14 @@ void Result(int num, int i)
 //Task21();
 //Task21_1();
 //Task19();
-Task23();
+//Task23();
+//Task24();
+//Task26();
+//Task26_1();
+//Task26_2();
+//Task28();
+Task30();
+
+
 
 Console.ReadLine();
