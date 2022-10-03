@@ -506,12 +506,12 @@ void Task30()
 //Task21_1();
 //Task19();
 //Task23();
-//Task24();
+Task24();
 //Task26();
 //Task26_1();
 //Task26_2();
 //Task28();
-Task30();
+//Task30();
 
 
 
